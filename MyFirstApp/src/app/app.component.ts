@@ -8,3 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'MyFirstApp';
 }
+
+@Component({
+  selector : 'app-root1',
+  template : `<h1>{{mymsg}}</h1>`,
+  styles : ['h1{color : blue}']
+})
+
+export class AppComponent1{
+  mymsg : string = "My Msg ....!";
+}
