@@ -15,6 +15,6 @@ export class AppComponent {
   styles : ['h1{color : blue}']
 })
 
-export class AppComponent1{
-  mymsg : string = "My Msg ....!";
+export class AppComponent1 {
+  mymsg = 'My AppComponent1 Msg ....!';
 }

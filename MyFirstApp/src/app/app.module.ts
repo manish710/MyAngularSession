@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent, AppComponent1 } from './app.component';
 import { MyNewMessageComponent } from './mynew-message/mynew-message.component';
+import {FailureMessageComponent} from './failure-message/failure-message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppComponent1,
-    MyNewMessageComponent
-  ],
+    MyNewMessageComponent,
+    FailureMessageComponent
+   ],
   imports: [
     BrowserModule
   ],
