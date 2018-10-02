@@ -22,6 +22,19 @@
             <app-contact-details></app-contact-details>
         </div>
       </div>
+      <div class="card">
+          <div class="card-header bg-dark text-white">
+              Skill Details
+          </div>
+          <div class="card-body">
+              <app-skill-list></app-skill-list>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+      <label>Marks</label><input type="text" name=studentMarks #studentMarks/><label>Out of</label><input type="text" name="outof" #outof/>
+      <button class="btn btn-info" (click)="CalculateGrade(studentMarks.value,outof.value)">Click Me</button>
+      <!-- <button class="btn btn-info" [disabled]="flag" (click)="sayHello(age.value)">Click Me</button> -->
     </div>
   </div> 
 </div>

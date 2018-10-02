@@ -1,0 +1,16 @@
+<table class="table">
+  <tr>
+    <th>Skill Name</th>
+    <th>Year of Exp</th>
+    <th>Expertise Level</th>
+  </tr>
+  <tr *ngFor = "let skill of skillList">
+    <td>{{skill.skillname}}</td>
+    <td>{{skill.exp}}</td>
+    <td>
+      <span *ngIf="skill.exp >= 8" class="bg-success text-white">Expert</span>
+      <span *ngIf="skill.exp >= 5 && skill.exp < 8" class="bg-dark text-white">Intermediate</span>
+      <span *ngIf="skill.exp >= 1 && skill.exp < 5" class="bg-info text-white">Beginner</span>
+    </td>
+  </tr>
+</table>
