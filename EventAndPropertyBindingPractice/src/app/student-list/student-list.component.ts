@@ -10,36 +10,37 @@ export class StudentListComponent implements OnInit {
 
   constructor() { }
 
-  txtrollno: number;
-  txtname: string;
-
   selectedStudent: Student = new Student();
-  NewlyAddedStudent: Student = new Student();
+  newStudent: Student = new Student();
 
 studentList: Student[] = [
   {
    "rollno":32,
-   "name":"Manish"
+   "name":"Manish",
+   "percent":"63.63"
   },
   {
     "rollno": 26,
     "name": "Danish"
-   },
-   {
-    "rollno": 44,
-    "name": "Vinit"
+    "percent":"74.63"
    }
 ]; 
 
   ngOnInit() {
-    this.NewlyAddedStudent.rollno = 0;
-    this.NewlyAddedStudent.name = '';
+    //this.newStudent.rollno = 0;
+    //this.newStudent.name = '';
   }
 
   setSelectedStudent(student:Student):void {
     console.log(student);
     this.selectedStudent = student;
 
+  }
+
+  AddStudent(){
+    this.studentList.push(Object.assign({}, this.newStudent));
+    this.newStudent.rollno = 0;
+    this.newStudent.name = '';
   }
 
 }
