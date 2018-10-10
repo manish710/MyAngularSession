@@ -21,7 +21,7 @@ studentList: Student[] = [
   },
   {
     "rollno": 26,
-    "name": "Danish"
+    "name": "Danish",
     "percent":"74.63"
    }
 ]; 

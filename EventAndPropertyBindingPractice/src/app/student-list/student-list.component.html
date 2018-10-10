@@ -13,8 +13,13 @@
           <tr>
               <td><label>Enter percentage.: </label></td>
               <td><input type=text class="form-control form-control-sm" name=txtper [(ngModel)]="newStudent.percent" /></td>
-              <td><!--<label>Enter Student Name.:</label>--></td>
-              <td><!--<input type=text class="form-control form-control-sm" name=txtname [(ngModel)]="newStudent.name" />--></td>
+              <td><label>Applied Scholarship:</label></td>
+              <td>
+                  <mat-radio-group>
+                    <mat-radio-button value="Yes">Option 1</mat-radio-button>
+                    <mat-radio-button value="No">Option 2</mat-radio-button>
+                  </mat-radio-group>
+                </td>
             </tr>
           <tr>
             <td colspan="4">
@@ -38,6 +43,7 @@
             <th>Roll No.</th>
             <th>Name</th>
             <th>Percentage</th>
+            <th>Grade</th>
             <th>Delete</th>
           </tr>
           <tr *ngFor="let student of studentList;let i=index" (click)="setSelectedStudent(student)" [class.selected]="selectedStudent === student">
