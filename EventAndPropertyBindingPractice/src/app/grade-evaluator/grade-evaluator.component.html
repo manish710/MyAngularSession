@@ -1,0 +1,17 @@
+<div [ngSwitch]="grade">
+  <span *ngSwitchCase="'Dist'" class="alert alert-success">
+    {{grade}}
+  </span>
+  <span *ngSwitchCase="'First'" class="alert alert-info">
+    {{{grade}}
+  </span>
+  <span *ngSwitchCase="'Second'" class="alert alert-Secondary">
+    {{grade}}
+  </span>
+  <span *ngSwitchCase="'Pass'" class="alert alert-warning">
+    {{grade}}
+  </span>   
+  <span *ngSwitchCase="'Fail'" class="alert alert-danger">
+    {{grade}}
+  </span> 
+</div>

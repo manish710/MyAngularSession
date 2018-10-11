@@ -4,11 +4,13 @@ import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { StudentListComponent } from './student-list/student-list.component';
+import { GradeEvaluatorComponent } from './grade-evaluator/grade-evaluator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StudentListComponent
+    StudentListComponent,
+    GradeEvaluatorComponent
   ],
   imports: [
     BrowserModule,

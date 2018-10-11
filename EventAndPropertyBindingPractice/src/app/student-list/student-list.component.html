@@ -52,13 +52,16 @@
             <td>{{student.rollno}}</td>
             <td>{{student.name}}</td>
             <td>{{student.percent}}</td>
-            <td [ngSwitch]="student.grade">
+            <td>
+              <app-grade-evaluator [percentage]="{{student.percent}}"></app-grade-evaluator>
+            </td>
+            <!-- <td [ngSwitch]="student.grade">
               <span *ngSwitchCase = "'Dist'"><span class="glyphicon glyphicon-plus"></span> {{student.grade}}</span>
               <span *ngSwitchCase = "'First'"><span class="glyphicon glyphicon-plus"></span> {{student.grade}}</span>
               <span *ngSwitchCase = "'Second'"><span class="glyphicon glyphicon-plus"></span> {{student.grade}}</span>
               <span *ngSwitchCase = "'Pass'"><span class="glyphicon glyphicon-plus"></span> {{student.grade}}</span>
               <span *ngSwitchCase = "'Fail'"><span class="glyphicon glyphicon-plus"></span> {{student.grade}}</span>
-            </td>
+            </td> -->
             <td>Working on it...</td>
             <td><button class="btn btn-danger" (click)="DeleteStudent(i)">Delete</button></td>
           </tr>
