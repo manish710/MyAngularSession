@@ -15,10 +15,10 @@
               <td><input type=text class="form-control form-control-sm" name=txtper [(ngModel)]="newStudent.percent" /></td>
               <td><label>Applied Scholarship:</label></td>
               <td>
-                  <mat-radio-group>
+                  <!-- <mat-radio-group>
                     <mat-radio-button value="Yes">Option 1</mat-radio-button>
                     <mat-radio-button value="No">Option 2</mat-radio-button>
-                  </mat-radio-group>
+                  </mat-radio-group> -->
                 </td>
             </tr>
           <tr>
@@ -44,6 +44,7 @@
             <th>Name</th>
             <th>Percentage</th>
             <th>Grade</th>
+            <th>Scholarship</th>
             <th>Delete</th>
           </tr>
           <tr *ngFor="let student of studentList;let i=index" (click)="setSelectedStudent(student)" [class.selected]="selectedStudent === student">
@@ -51,6 +52,14 @@
             <td>{{student.rollno}}</td>
             <td>{{student.name}}</td>
             <td>{{student.percent}}</td>
+            <td [ngSwitch]="student.grade">
+              <span *ngSwitchCase = "'Dist'"><span class="glyphicon glyphicon-plus"></span> {{student.grade}}</span>
+              <span *ngSwitchCase = "'First'"><span class="glyphicon glyphicon-plus"></span> {{student.grade}}</span>
+              <span *ngSwitchCase = "'Second'"><span class="glyphicon glyphicon-plus"></span> {{student.grade}}</span>
+              <span *ngSwitchCase = "'Pass'"><span class="glyphicon glyphicon-plus"></span> {{student.grade}}</span>
+              <span *ngSwitchCase = "'Fail'"><span class="glyphicon glyphicon-plus"></span> {{student.grade}}</span>
+            </td>
+            <td>Working on it...</td>
             <td><button class="btn btn-danger" (click)="DeleteStudent(i)">Delete</button></td>
           </tr>
         </table>
