@@ -61,6 +61,10 @@ studentList: Student[] = [
     }
   }
 
+  getGrade(grade): void {
+    console.log(grade);
+  }
+
   // calculateGrade(): any {
   //   if (this.newStudent.percent >= 70) {
   //     return 'Dist';

@@ -53,7 +53,7 @@
             <td>{{student.name}}</td>
             <td>{{student.percent}}</td>
             <td>
-              <app-grade-evaluator [percentage]="{{student.percent}}"></app-grade-evaluator>
+              <app-grade-evaluator [percentage]="student.percent" (EvaluateGrade)="getGrade($event)"></app-grade-evaluator>
             </td>
             <!-- <td [ngSwitch]="student.grade">
               <span *ngSwitchCase = "'Dist'"><span class="glyphicon glyphicon-plus"></span> {{student.grade}}</span>

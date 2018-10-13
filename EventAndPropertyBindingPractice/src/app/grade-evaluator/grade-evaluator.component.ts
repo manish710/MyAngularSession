@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-grade-evaluator',
@@ -7,16 +7,21 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class GradeEvaluatorComponent implements OnInit {
 
-  grade = '';
+  grade: string = '';
 
   @Input()
   percentage: number;
 
+  @Output()
+  EvaluateGrade = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit() {
+    this.calculateGrade();
   }
   calculateGrade(): void {
+    console.log('here in GradeEvaluator' + this.percentage);
     if (this.percentage >= 70) {
       this.grade = 'Dist';
     } else if (this.percentage >= 60) {
@@ -28,6 +33,7 @@ export class GradeEvaluatorComponent implements OnInit {
     } else {
       this.grade = 'Fail';
     }
+    this.EvaluateGrade.emit(this.grade);
   }
 
 }
